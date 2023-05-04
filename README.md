@@ -3,7 +3,8 @@
 
 This extension is inspired by [Cpp Reference - VS Code Extension](https://github.com/Guyutongxue/VSC_CppReference) which was inspired by [Cpp Reference and Documentation](https://github.com/FederAndInk/search-cpp-documentation) which was a fork of [library-documentation-cpp](https://github.com/gursahani/search-cpp-documentation)
 
-This will be a tool to browse [cplusplus.com](https://cplusplus.com) from within vscode, instead of going to the browser to do so. You can use this extension to search for library and methods documentation of the C++ standard.
+This will be a tool to browse [cplusplus.com](https://cplusplus.com) from within vscode essentially updating the original [library-documentation-cpp](https://github.com/gursahani/search-cpp-documentation) to work with VSCode webview, as the original does not.
+You will be able to use this extension to search for library and methods documentation of the C++ standard.
 
 ## TODO:
 
