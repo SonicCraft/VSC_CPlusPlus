@@ -1,16 +1,8 @@
 import vscode from "vscode";
 
+// This function doesn't need to be in settings.ts
 export function getLink(path: string): string {
-  const alternative = vscode.workspace
-    .getConfiguration("cppref.alternative")
-    .get("enabled");
-  if (alternative) {
-    const url = vscode.workspace.getConfiguration("cppref.alternative").get("url")!;
-    return url + path;
-  } else {
-    const lang: string = vscode.workspace.getConfiguration("cppref").get("lang")!;
-    return `https://${lang}.cppreference.com/w/${path}`
-  }
+  return `https://cplusplus.com/search.do?q=${path}`;
 }
 
 export function getSearchEnginePath(word: string) {
