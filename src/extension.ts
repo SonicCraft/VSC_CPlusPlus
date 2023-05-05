@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       } else {
         wvPanel = vscode.window.createWebviewPanel(
           "docs",
-          "C++ Reference",
+          "CPlusPlus.com",
           {
             viewColumn: vscode.ViewColumn.Beside,
             preserveFocus: false,
@@ -47,6 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
   const search = vscode.commands.registerCommand("cppref.search", () => {
     main(true);
   });
+  // Obsolete command
   const updateIndex = vscode.commands.registerCommand(
     "cppref.updateIndex",
     () => {

@@ -16,7 +16,7 @@ You will be able to use this extension to search for library and methods documen
 6. Make dark mode on by default
 7. Update this README again (instruction gif, edit description, etc.)
 
-## Planned Features
+## Planned Features:
 
 1. Make dark mode copy VSCode colors
 2. implement cplusplus search suggestions (as an option, I want the default to drop whatever you have selected into cplusplus.com's search bar)
