@@ -1,8 +1,6 @@
-import vscode from "vscode";
+import * as vscode from 'vscode';
 
-import { getLink, getSearchEnginePath, shouldInvert } from "./settings";
-import { getPath } from "./data";
-import { UserCancelledError } from "./utils";
+import { getLink, shouldInvert } from "./settings";
 
 function getCurrentWord(): string {
   const active = vscode.window.activeTextEditor;
@@ -16,18 +14,14 @@ function getCurrentWord(): string {
     const word = active.document.getText(range);
     return word;
   } else {
-    throw new Error("No identifier found.");
+    vscode.window.showInformationMessage("No identifier found, opening main page.");
+    return "";
   }
 }
 
 export async function getWvContent(manually: boolean): Promise<string> {
   const word = manually ? "" : getCurrentWord();
-  const path = await getPath(word);
-  if (path === null) {
-    vscode.env.openExternal(vscode.Uri.parse(getSearchEnginePath(word)));
-    throw new UserCancelledError();
-  }
-  const link = getLink(path);
+  const link = getLink(word);
   const invertColor = shouldInvert();
   return `<!DOCTYPE html>
 <meta charset="UTF-8">

@@ -1,8 +1,10 @@
+// The module 'vscode' contains the VS Code extensibility API
+// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
-
 import { getWvContent } from "./webview";
-import { initData, updateData } from "./data";
-import { UserCancelledError } from "./utils";
+
+// This method is called when your extension is activated
+// Your extension is activated the very first time the command is executed
 
 export function activate(context: vscode.ExtensionContext) {
   let wvPanel: vscode.WebviewPanel | undefined = undefined;
@@ -36,7 +38,6 @@ export function activate(context: vscode.ExtensionContext) {
       wvPanel.webview.html = content;
     } catch (error) {
       if (error instanceof Error) {
-        if (!(error instanceof UserCancelledError))
           vscode.window.showInformationMessage(error.message);
       }
     }
@@ -47,25 +48,6 @@ export function activate(context: vscode.ExtensionContext) {
   const search = vscode.commands.registerCommand("cppref.search", () => {
     main(true);
   });
-  // Obsolete command
-  const updateIndex = vscode.commands.registerCommand(
-    "cppref.updateIndex",
-    () => {
-      vscode.window.withProgress(
-        {
-          location: vscode.ProgressLocation.Notification,
-          title: "Fetching latest index from cdn.jsdelivr.net...",
-        },
-        async (progress) => {
-          try {
-            await updateData(context);
-          } catch (err) {
-            vscode.window.showErrorMessage(err.message);
-          }
-        }
-      );
-    }
-  );
-  context.subscriptions.push(open, search, updateIndex);
-  initData(context);
 }
+// This method is called when your extension is deactivated
+export function deactivate() {}
