@@ -1,13 +1,35 @@
 {
   "name": "cplusplus-reference",
   "displayName": "CPlusPlus.com Reference",
-  "description": "",
-  "version": "0.0.1",
+  "description": "A tool to browse CPlusPlus.com from within VSCode.",
+  "version": "1.0.0",
+  "author": {
+    "name": "SonicCraft",
+    "url": "https://github.com/SonicCraft",
+    "email": "joshuapgerber@gmail.com"
+  },
   "engines": {
-    "vscode": "^1.78.0"
+    "vscode": "^1.78.0",
+    "node": ">= 16.15.0"
+  },
+  "icon": "img/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SonicCraft/VSC_CPlusPlus.git"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "cpp",
+    "c++",
+    "cpplusplus",
+    "search",
+    "documentation",
+    "docs",
+    "devdocs",
+    "reference"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
