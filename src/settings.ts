@@ -9,5 +9,5 @@ export function getLink(path: string): string {
 }
 
 export function shouldInvert() {
-  return vscode.workspace.getConfiguration("cplplref").get("invertColorInDarkTheme", false);
+  return vscode.workspace.getConfiguration("cppref").get("invertColorInDarkTheme", false);
 }

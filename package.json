@@ -36,19 +36,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "cplplref.open",
+        "command": "cppref.open",
         "title": "Search for the current word",
         "category": "CPlusPlus Search:"
       },
       {
-        "command": "cplplref.search",
+        "command": "cppref.search",
         "title": "Search manually",
         "category": "CPlusPlus Search:"
       }
     ],
     "keybindings": [
       {
-        "command": "cplplref.open",
+        "command": "cppref.open",
         "key": "ctrl+shift+A",
         "mac": "cmd+shift+A",
         "when": "editorTextFocus"
@@ -58,7 +58,7 @@
       {
         "title": "CPlusPlus Search",
         "properties": {
-          "cplplref.invertColorInDarkTheme": {
+          "cppref.invertColorInDarkTheme": {
             "type": "boolean",
             "title": "Invert color in dark theme",
             "markdownDescription": "When using vscode's Dark Theme or Dark High Contrast Theme, invert the page's color. \n\n**Warning**: This feature is implemented using CSS filter and may result in sharper text edges, making it difficult to read.",
