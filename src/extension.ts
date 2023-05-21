@@ -42,10 +42,10 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
   }
-  const open = vscode.commands.registerCommand("cppref.open", () => {
+  const open = vscode.commands.registerCommand("cplplref.open", () => {
     main(false);
   });
-  const search = vscode.commands.registerCommand("cppref.search", () => {
+  const search = vscode.commands.registerCommand("cplplref.search", () => {
     main(true);
   });
 }
