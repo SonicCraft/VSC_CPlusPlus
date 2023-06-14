@@ -17,8 +17,8 @@ You will be able to use this extension to search for library and methods documen
 
 ## Planned Features:
 
-1. Make dark mode copy VSCode colors
-2. Block ads?
+1. Make dark mode copy VSCode colors ([get colors](https://stackoverflow.com/questions/47117621/how-to-get-the-vscode-theme-color-in-vscode-extensions), [set specific colors](https://blog.hubspot.com/website/change-background-color-html), and [get complementary color](https://stackoverflow.com/questions/35969656/how-can-i-generate-the-opposite-color-according-to-current-color))
+2. Block ads? ([unload ad part](https://stackoverflow.com/questions/39240278/how-to-block-ads-with-html-js))
 ## Usage:
 
 ### Intended usage:
