@@ -1,6 +1,7 @@
 {
   "name": "cplusplus-reference",
   "displayName": "CPlusPlus.com Reference",
+  "publisher": "SonicCraft",
   "description": "A tool to browse CPlusPlus.com from within VSCode.",
   "version": "1.0.0",
   "author": {
